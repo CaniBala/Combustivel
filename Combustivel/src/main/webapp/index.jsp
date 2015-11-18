@@ -29,11 +29,11 @@
             <input type="text" name="valorGasolina" class="form-control" placeholder="Valor da Gasolína" value ="${param.valorGasolina }" />
             </br>
             <h6>Digite o valor do Álcool:</h6>
-            <input type="text" name="valorAlcool" class="form-control input-sm chat-input" placeholder="Valor do Álcool" />
+            <input type="text" name="valorAlcool" class="form-control" placeholder="Valor do Álcool" value ="${param.valorAlcool }"/>
             </br>
             <div class="wrapper">
             <span class="group-btn">    
-                <a href="#" class="btn btn-primary btn-md">Calcular <i class="fa fa-sign-in"></i></a>
+                <input type="submit" value="Calcular" class="btn btn-primary btn-md">
             </span>
             </div>
             </div>
