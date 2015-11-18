@@ -45,10 +45,23 @@
 
  <%
            //Obtendo a variável definida no servlet.
-            cComb.CalculoCombModel valorResultado = (cComb.CalculoCombModel) request.getAttribute("combustivel");
- valorResultado.getValorResultado();
-valorResultado.resultado;
+            mvc.CalculoCombModel calculoResultado = (mvc.CalculoCombModel) request.getAttribute("valorResultado");
+ if (calculoResultado.getValorGasolina() == 0 || calculoResultado.getValorAlcool() == 0) {
 %>
+<!-- Aqui posso colocar HTML. -->
+<div class="alert alert-danger" role="alert">Coloque algum valor nos campos Peso e Altura.</div>
+<%
+ } else {
+   %>
+<!-- Aqui posso colocar HTML. -->
+<div class="alert alert-success" role="alert">
+Porcentagem: <%calculoResultado.getValorResultado();%>
+<br>
+Resultado: ${calculoResultado.resultado}
+</div>
+   <%
+ }
+ %>
    
    
    

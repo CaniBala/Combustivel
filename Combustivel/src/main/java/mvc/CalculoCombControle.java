@@ -16,20 +16,24 @@ public class CalculoCombControle extends HttpServlet {
       HttpServletResponse resp)
       throws ServletException, IOException {
 
-    String valorGasolina = req.getParameter("valorGasolina");
-    //Double peso = paramPeso == null ? 0.0 : Double.parseDouble(paramPeso);
+    String paramValorGasolina = req.getParameter("valorGasolina");
+    Double valorGasolina = paramValorGasolina == null ? 0.0 : Double.parseDouble(paramValorGasolina);
     
-    String valorAlcool = req.getParameter("valorAlcool");
-    //Double altura = paramAltura == null ? 0.0 : Double.parseDouble(paramAltura);
+    String paramValorAlcool = req.getParameter("valorAlcool");
+    Double valorAlcool = paramValorAlcool == null ? 0.0 : Double.parseDouble(paramValorAlcool);
+
 
     CalculoCombModel cComb = new CalculoCombModel();
     cComb.setValorGasolina(valorGasolina);
     cComb.setValorAlcool(valorAlcool);
+    cComb.valorResultado();
+    cComb.resultado();
     
-    req.setAttribute("combustivel", cComb); //Passando um objeto para o JSP.
+    /*nao sei se esta certo*/
+    req.setAttribute("valorResultado", cComb); //Passando um objeto para o JSP.
     
     //Chamar o JSP apenas para mostrar o resultado.
-    req.getRequestDispatcher("/index.jsp").forward(req, resp);
+    req.getRequestDispatcher("index.jsp").forward(req, resp);
   }
 
 }
