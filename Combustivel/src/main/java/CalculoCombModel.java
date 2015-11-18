@@ -15,8 +15,19 @@ public class CalculoCombModel {
     public void setValorAlcool(double valorAlcool) {
         this.valorAlcool = valorAlcool;
     }
-
-    public void valorResultado(){
+    public double getValorResultado() {
+		return valorResultado;
+	}
+	public void setValorResultado(double valorResultado) {
+		this.valorResultado = valorResultado;
+	}
+public String getResultado() {
+		return resultado;
+	}
+	public void setResultado(String resultado) {
+		this.resultado = resultado;
+	}
+	public void valorResultado(){
        
         valorResultado = valorAlcool/valorGasolina;
        

@@ -41,7 +41,14 @@
         </div>
     </div>
 </div>
-   
+
+
+ <%
+           //Obtendo a variável definida no servlet.
+            cComb.CalculoCombModel valorResultado = (cComb.CalculoCombModel) request.getAttribute("combustivel");
+ valorResultado.getValorResultado();
+valorResultado.resultado;
+%>
    
    
    
