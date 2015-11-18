@@ -1,3 +1,5 @@
+package mvc;
+
 public class CalculoCombModel {
    
     private double valorGasolina, valorAlcool, valorResultado;
@@ -21,18 +23,18 @@ public class CalculoCombModel {
 	public void setValorResultado(double valorResultado) {
 		this.valorResultado = valorResultado;
 	}
-public String getResultado() {
+	public String getResultado() {
 		return resultado;
 	}
-	public void setResultado(String resultado) {
-		this.resultado = resultado;
-	}
+	
+	//Calcula a % de alcool referente a gasolina
 	public void valorResultado(){
        
         valorResultado = valorAlcool/valorGasolina;
        
     }
    
+	//Imprime o resultado do que deve ser abastecido
     public void resultado(){
        
          if (valorResultado <= 0.7) {
