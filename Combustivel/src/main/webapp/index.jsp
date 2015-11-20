@@ -23,7 +23,10 @@
     <div class="row">
       <div class="col-md-offset-5 col-md-6">
 
+<form role="form">
+
             <div class="form-group">
+            
             <h1>Qual combustível?</h1>
             <h6>Digite o valor da Gasolína:</h6>
             <input type="text" name="valorGasolina" class="form-control" placeholder="Valor da Gasolína" value ="${param.valorGasolina }" />
@@ -37,6 +40,10 @@
             </span>
             </div>
             </div>
+            
+         
+            </form>
+            
        
         </div>
     </div>
@@ -45,8 +52,8 @@
 
  <%
            //Obtendo a variável definida no servlet.
-            mvc.CalculoCombModel calculoResultado = (mvc.CalculoCombModel) request.getAttribute("valorResultado");
- if (calculoResultado.getValorGasolina() == 0 || calculoResultado.getValorAlcool() == 0) {
+            mvc.CalculoCombModel calculoCombustivel = (mvc.CalculoCombModel) request.getAttribute("valorResultado");
+ if (calculoCombustivel.getValorGasolina() == 0 || calculoCombustivel.getValorAlcool() == 0) {
 %>
 <!-- Aqui posso colocar HTML. -->
 <div class="alert alert-danger" role="alert">Coloque algum valor nos campos Peso e Altura.</div>
@@ -55,7 +62,7 @@
    %>
 <!-- Aqui posso colocar HTML. -->
 <div class="alert alert-success" role="alert">
-Porcentagem: <%calculoResultado.getValorResultado();%>
+Porcentagem: <%=calculoCombustivel.getValorResultado()%>
 <br>
 Resultado: ${calculoResultado.getResultado}
 </div>
