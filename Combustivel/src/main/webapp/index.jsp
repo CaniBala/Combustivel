@@ -57,7 +57,7 @@
 <div class="alert alert-success" role="alert">
 Porcentagem: <%calculoResultado.getValorResultado();%>
 <br>
-Resultado: ${calculoResultado.resultado}
+Resultado: ${calculoResultado.getResultado}
 </div>
    <%
  }

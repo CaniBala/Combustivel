@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-WebServlet(value = "/combustivel")
+@WebServlet(value = "/aaa")
 public class CalculoCombControle extends HttpServlet {
 
   protected void service(
