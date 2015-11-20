@@ -64,7 +64,7 @@
 <div class="alert alert-success" role="alert">
 Porcentagem: <%=calculoCombustivel.getValorResultado()%>
 <br>
-Resultado: ${calculoResultado.getResultado}
+Resultado: <%=calculoCombustivel.getResultado()%>
 </div>
    <%
  }
